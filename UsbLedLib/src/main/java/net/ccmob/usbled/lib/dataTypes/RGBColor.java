@@ -98,6 +98,30 @@ public class RGBColor {
         this.setG(this.getG() - c.getG());
         this.setR(this.getR() - c.getR());
     }
+    
+    public void mul(RGBColor c) {
+        this.setB(this.getB() * c.getB());
+        this.setG(this.getG() * c.getG());
+        this.setR(this.getR() * c.getR());
+    }
+    
+    public void mul(float factor) {
+        this.setB((int) (this.getB() * factor));
+        this.setG((int) (this.getG() * factor));
+        this.setR((int) (this.getR() * factor));
+    }
+    
+    public void div(RGBColor c) {
+        this.setB(this.getB() / c.getB());
+        this.setG(this.getG() / c.getG());
+        this.setR(this.getR() / c.getR());
+    }
+    
+    public void div(float factor) {
+        this.setB((int) (this.getB() / factor));
+        this.setG((int) (this.getG() / factor));
+        this.setR((int) (this.getR() / factor));
+    }
 
     @Override
     public String toString() {
