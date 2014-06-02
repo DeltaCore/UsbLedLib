@@ -34,7 +34,7 @@ public class Device {
         if(!ControllerInterface.isConnected())
             throw new UsbLedException("No device connected.", UsbLedState.DEVICE_NOT_CONNECTED);
         try {
-            ControllerInterface.getInstance().getSerialDevice().writeBytes(cmd.toByteArray());
+            ControllerInterface.getInstance().getSerialDevice().writeBytes(cmd.toByteArray());   
         } catch (SerialPortException e) {
             if(e.getExceptionType() == SerialPortException.TYPE_PORT_NOT_OPENED){
                 throw new UsbLedException("Device port not opened: " + ControllerInterface.port, UsbLedState.DEVICE_NOT_CONNECTED);

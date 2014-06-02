@@ -9,4 +9,12 @@ public class ColorCommand extends Command{
 		this.setCmdData4(stripe);
 	}
 	
+	public char getColor(){
+	    return (char) this.getCmdData1();
+	}
+	
+	public int getValue(){
+	    return this.getCmdData2();
+	}
+	
 }

@@ -39,4 +39,8 @@ public class RGBColorCommand extends Command {
 		this.setCmdData4(id);
 	}
 	
+	public RGBColor getColor(){
+	    return new RGBColor(this.getCmdData1(), this.getCmdData2(), this.getCmdData3());
+	}
+	
 }

@@ -161,4 +161,9 @@ public abstract class BaseProgram implements Runnable{
         }
     }
     
+    protected void setAddress(int pcbAdress, int stripe){
+        cmd.setCommandAddress(pcbAdress);
+        cmd.setStripeAddress(stripe);
+    }
+    
 }

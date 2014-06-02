@@ -7,7 +7,11 @@ public class RGBColor {
     private int r = 0, g = 0, b = 0;
 
     public RGBColor() {
-        this(0,0,0);
+        this(0, 0, 0);
+    }
+
+    public RGBColor(RGBColor c) {
+        this(c.getR(), c.getG(), c.getB());
     }
 
     public RGBColor(int r, int g, int b) {
@@ -21,7 +25,7 @@ public class RGBColor {
     }
 
     public RGBColor(int rgb) {
-        this((byte) (rgb << 16),(byte) (rgb << 8),(byte) (rgb));
+        this((byte) (rgb << 16), (byte) (rgb << 8), (byte) (rgb));
     }
 
     /**
@@ -69,6 +73,12 @@ public class RGBColor {
         this.b = b;
     }
 
+    public void set(RGBColor c) {
+        this.setB(c.getB());
+        this.setG(c.getG());
+        this.setR(c.getR());
+    }
+
     public int getRGB() {
         return (int) (((byte) (this.getB())) & ((byte) (this.getG() >> 8)) & ((byte) (this.getR() >> 16)));
     }
@@ -77,16 +87,21 @@ public class RGBColor {
         return new Color(getRGB());
     }
 
-    public void add(RGBColor c){
+    public void add(RGBColor c) {
         this.setB(this.getB() + c.getB());
         this.setG(this.getG() + c.getG());
         this.setR(this.getR() + c.getR());
     }
-    
-    public void sub(RGBColor c){
+
+    public void sub(RGBColor c) {
         this.setB(this.getB() - c.getB());
         this.setG(this.getG() - c.getG());
         this.setR(this.getR() - c.getR());
     }
-        
+
+    @Override
+    public String toString() {
+        return "[[" + this.getR() + "][" + this.getG() + "][" + this.getB() + "]]";
+    }
+
 }

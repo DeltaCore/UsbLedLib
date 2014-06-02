@@ -12,14 +12,23 @@ public class ColorChange extends BaseProgram {
     public void execute() {
         this.setSpeed(10);
         for (int i = 0; i < 256; i++) {
+            this.setAddress(1, 1);
+            this.updateColor(i, 0, 255 - i);
+            this.setAddress(1, 2);
             this.updateColor(i, 0, 255 - i);
             sleep(this.getSpeed());
         }
         for (int i = 0; i < 256; i++) {
+            this.setAddress(1, 1);
+            this.updateColor(255 - i, i, 0);
+            this.setAddress(1, 2);
             this.updateColor(255 - i, i, 0);
             sleep(this.getSpeed());
         }
         for (int i = 0; i < 256; i++) {
+            this.setAddress(1, 1);
+            this.updateColor(0, 255 - i, i);
+            this.setAddress(1, 2);
             this.updateColor(0, 255 - i, i);
             sleep(this.getSpeed());
         }
