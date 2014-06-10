@@ -26,42 +26,42 @@ public class Command {
 	/**
 	 * @return the address
 	 */
-	protected int getAddress() {
+	public int getAddress() {
 		return address;
 	}
 
 	/**
 	 * @return the cmd
 	 */
-	protected int getCmd() {
+	public int getCmd() {
 		return cmd;
 	}
 
 	/**
 	 * @return the cmdData1
 	 */
-	protected int getCmdData1() {
+	public int getCmdData1() {
 		return cmdData1;
 	}
 
 	/**
 	 * @return the cmdData2
 	 */
-	protected int getCmdData2() {
+	public int getCmdData2() {
 		return cmdData2;
 	}
 
 	/**
 	 * @return the cmdData3
 	 */
-	protected int getCmdData3() {
+	public int getCmdData3() {
 		return cmdData3;
 	}
 
 	/**
 	 * @return the cmdData4
 	 */
-	protected int getCmdData4() {
+	public int getCmdData4() {
 		return cmdData4;
 	}
 
