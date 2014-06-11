@@ -58,9 +58,11 @@ public class UiTest implements ProgramStateChangeListener {
 
 		BaseProgram colorChange = new ColorChange();
 		BaseProgram otherColorChange = new OtherColor();
+		BaseProgram set = new Set();
 
 		ProgramHandler.getInstance().addProgram(colorChange);
 		ProgramHandler.getInstance().addProgram(otherColorChange);
+		ProgramHandler.getInstance().addProgram(set);
 
 		frmUsbledlib = new JFrame();
 		frmUsbledlib.setTitle("UsbLedLib");
