@@ -127,5 +127,15 @@ public class RGBColor {
     public String toString() {
         return "[[" + this.getR() + "][" + this.getG() + "][" + this.getB() + "]]";
     }
+    
+    public int max(){
+    	if(this.r >= this.b && this.r >= this.g)
+    		return this.r;
+    	if(this.g >= this.b && this.g >= this.r)
+    		return this.g;
+    	if(this.b >= this.r && this.b >= this.g)
+    		return this.b;
+    	return 0;
+    }
 
 }
